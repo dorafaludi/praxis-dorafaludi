@@ -1,0 +1,11 @@
+/* LeadToWork webfonts.
+ * Inter — the product UI typeface (loaded via next/font in the real app).
+ * Funnel Display — the display face used on the branded marketing landings.
+ * Both are the genuine fonts the product ships; served here from Google Fonts.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Funnel+Display:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Funnel Display', 'Inter', system-ui, sans-serif;
+}

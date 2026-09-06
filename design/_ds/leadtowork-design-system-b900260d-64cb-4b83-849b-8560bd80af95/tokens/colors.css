@@ -1,0 +1,110 @@
+/* ============================================================
+ * LeadToWork — Color tokens
+ * ------------------------------------------------------------
+ * The product UI is built on shadcn/ui. Colors are stored as
+ * raw HSL channel triplets ("H S% L%") and consumed with
+ * hsl(var(--token)) so opacity modifiers work (hsl(var(--primary)/0.1)).
+ * This mirrors src/app/globals.css from the LeadToWork codebase.
+ * ============================================================ */
+
+:root {
+  /* ---- Surfaces & text ---- */
+  --background: 220 20% 98%; /* @kind color */         /* app canvas — near-white cool gray */
+  --foreground: 220 15% 15%; /* @kind color */         /* primary text — ink */
+  --card: 0 0% 100%; /* @kind color */                 /* card surface — white */
+  --card-foreground: 220 15% 15%; /* @kind color */
+  --popover: 0 0% 100%; /* @kind color */
+  --popover-foreground: 220 15% 15%; /* @kind color */
+
+  /* ---- Primary (LeadToWork steel blue) ---- */
+  --primary: 208 58% 43%; /* @kind color */            /* #2d6ca6 — buttons, links, active nav */
+  --primary-foreground: 0 0% 100%; /* @kind color */
+  --primary-hover: 208 58% 38%; /* @kind color */
+
+  /* ---- Secondary / muted / accent ---- */
+  --secondary: 220 15% 96%; /* @kind color */
+  --secondary-foreground: 220 15% 25%; /* @kind color */
+  --muted: 220 15% 96%; /* @kind color */
+  --muted-foreground: 220 10% 50%; /* @kind color */   /* captions, helper text */
+  --accent: 208 58% 95%; /* @kind color */             /* tinted blue wash */
+  --accent-foreground: 208 58% 25%; /* @kind color */
+
+  /* ---- Lines & fields ---- */
+  --border: 220 15% 88%; /* @kind color */
+  --input: 220 15% 95%; /* @kind color */
+  --ring: 208 58% 43%; /* @kind color */
+
+  /* ---- Destructive ---- */
+  --destructive: 0 84% 60%; /* @kind color */
+  --destructive-foreground: 0 0% 100%; /* @kind color */
+
+  /* ---- Brand accent slot (per-tenant override at runtime) ---- */
+  --brand-accent: 222 47% 40%; /* @kind color */
+  --brand-accent-foreground: 0 0% 100%; /* @kind color */
+  --brand-accent-text: 222 47% 35%; /* @kind color */
+
+  /* ---- Amber — the "WORK" in the wordmark, a warm highlight ---- */
+  --amber-500: 38 92% 50%; /* @kind color */           /* #f59e0b */
+
+  /* ---- Dark navy sidebar (the app shell uses a deep navy nav) ---- */
+  --sidebar-background: 222 47% 11%; /* @kind color */
+  --sidebar-foreground: 210 40% 98%; /* @kind color */
+  --sidebar-primary: 221 83% 53%; /* @kind color */
+  --sidebar-primary-foreground: 0 0% 100%; /* @kind color */
+  --sidebar-accent: 217 33% 17%; /* @kind color */
+  --sidebar-accent-foreground: 210 40% 98%; /* @kind color */
+  --sidebar-border: 217 33% 17%; /* @kind color */
+
+  /* ---- Brand blue scale ---- */
+  --brand-50: 214 100% 97%; /* @kind color */
+  --brand-100: 214 95% 93%; /* @kind color */
+  --brand-200: 213 97% 87%; /* @kind color */
+  --brand-500: 217 91% 60%; /* @kind color */
+  --brand-700: 224 76% 48%; /* @kind color */
+  --brand-800: 226 71% 40%; /* @kind color */
+
+  /* ---- Neutral gray scale ---- */
+  --neutral-50: 210 40% 98%; /* @kind color */
+  --neutral-400: 215 20% 65%; /* @kind color */
+  --neutral-600: 215 19% 35%; /* @kind color */
+  --neutral-700: 215 25% 27%; /* @kind color */
+
+  /* ---- Chart palette ---- */
+  --chart-1: 221 83% 53%; /* @kind color */
+  --chart-2: 142 71% 45%; /* @kind color */
+  --chart-3: 38 92% 50%; /* @kind color */
+  --chart-4: 280 65% 60%; /* @kind color */
+  --chart-5: 340 75% 55%; /* @kind color */
+
+  /* ============================================================
+   * Semantic status families (success / warning / danger / error / info)
+   * The app maps these to Tailwind's green / yellow / orange / red / blue
+   * scales. Exposed here as hex so non-Tailwind consumers can use them.
+   * ============================================================ */
+  --success-50:  #f0fdf4;  --success-100: #dcfce7;  --success-200: #bbf7d0;
+  --success-500: #22c55e;  --success-600: #16a34a;  --success-700: #15803d;  --success-800: #166534;
+  --warning-50:  #fefce8;  --warning-100: #fef9c3;  --warning-200: #fef08a;
+  --warning-500: #eab308;  --warning-600: #ca8a04;  --warning-700: #a16207;  --warning-800: #854d0e;
+  --danger-50:   #fff7ed;  --danger-100:  #ffedd5;  --danger-200:  #fed7aa;
+  --danger-500:  #f97316;  --danger-600:  #ea580c;  --danger-700:  #c2410c;  --danger-800:  #9a3412;
+  --error-50:    #fef2f2;  --error-100:   #fee2e2;  --error-200:   #fecaca;
+  --error-500:   #ef4444;  --error-600:   #dc2626;  --error-700:   #b91c1c;  --error-800:   #991b1b;
+  --info-50:     #eff6ff;  --info-100:    #dbeafe;  --info-200:    #bfdbfe;
+  --info-500:    #3b82f6;  --info-600:    #2563eb;  --info-700:    #1d4ed8;  --info-800:    #1e40af;
+
+  /* ============================================================
+   * Branded landing palette (flooring / paving marketing pages)
+   * A separate warm cream + coral + navy theme used ONLY on the
+   * public, white-label landing pages — never inside the app shell.
+   * ============================================================ */
+  --land-orange: #E8563A;
+  --land-orange-hover: #d44c31;
+  --land-navy: #1C2340;
+  --land-navy-mid: #243060;
+  --land-cream: #F7F3EE;
+  --land-cream-dark: #EDE8E2;
+  --land-green: #2DB87A;
+  --land-text-dark: #1C2340;
+  --land-text-mid: #4A5068;
+  --land-text-light: #7B8099;
+}
