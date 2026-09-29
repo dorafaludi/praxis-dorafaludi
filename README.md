@@ -4,6 +4,15 @@ Dora Faludi (pszichológus MSc, Heilpraktikerin für Psychotherapie) német nyel
 online praxis-honlapja. Statikus oldal — nincs build lépés, nincs futásidejű
 függőség: ami a repóban van, az megy ki élesre.
 
+## Hol fut
+
+**https://praxis-dorafaludi.com/** — GitHub Pages, a `main` ág gyökeréből; minden
+push a `main`-re pár perc alatt élesbe megy. A `CNAME` fájl köti a domainhez —
+ne töröld, mert akkor az oldal visszaesik a `dorafaludi.github.io/praxis-dorafaludi/`
+címre. A domain a Cloudflare-nél van regisztrálva; a DNS-rekordok ott vannak
+(4 × A a GitHub Pages IP-ire + `www` CNAME → `dorafaludi.github.io`, mind
+„DNS only", szürke felhővel — narancssárgával a GitHub nem tud tanúsítványt kérni).
+
 ## Mi van itt
 
 ```
@@ -55,9 +64,9 @@ Aztán `http://127.0.0.1:4173/`. (Bármelyik statikus szerver jó.)
    és címe (adatfeldolgozói szerződéssel), a foglalási eszköz adatai.
    Mindkét szöveg **ügyvédi ellenőrzést igényel** — a bennük lévő narancssárga
    figyelmeztető dobozt is törölni kell.
-3. **Domain.** Jelenleg `https://dorafaludi.de/` szerepel a canonical, az OG-tag,
-   a `sitemap.xml` és a `robots.txt` értékeként (az e-mail-cím alapján tippelve).
-   Ha más lesz a domain, ezen a négy helyen kell átírni.
+3. **E-mail-cím.** A `praxis@dorafaludi.de` a canvasból jött, és a `dorafaludi.de`
+   domain nem létezik — az oda írt levél visszapattan. Szerepel: `index.html`
+   (JSON-LD + kapcsolat), `assets/js/site.js`, `impressum.html`, `datenschutz.html`.
 4. **Calendly link** ellenőrzése: `https://calendly.com/dora-faludi/erstgespraech`
    — a canvasból jött, létező naptárra kell mutatnia.
 5. **A portréfotó jogtisztasága** — a `design/uploads/` mappából származik.

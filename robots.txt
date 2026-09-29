@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://dorafaludi.de/sitemap.xml
+Sitemap: https://praxis-dorafaludi.com/sitemap.xml
